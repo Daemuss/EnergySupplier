@@ -27,6 +27,12 @@ public class UsageList
         this.energySuppliers.add(energySupplier);
     }
 
+    // Returns the amount of customers in the list
+    public int getCustomerListAmount()
+    {
+        return this.customers.size();
+    }
+
     // Returns customer usage information
     public String getUsageListInformation()
     {
@@ -36,7 +42,6 @@ public class UsageList
         for (Customer customer : customers)
         {
             i++;
-            stringBuilder.append(System.lineSeparator());
             stringBuilder.append(customer.getAddress());
             stringBuilder.append(System.lineSeparator());
             stringBuilder.append(energySuppliers.get(i).getSupplierName());
@@ -48,6 +53,8 @@ public class UsageList
             stringBuilder.append(customer.getElectricUsage());
             stringBuilder.append(System.lineSeparator());
             stringBuilder.append(customer.getGasUsage());
+            stringBuilder.append(System.lineSeparator());
+            stringBuilder.append(System.lineSeparator());
         }
 
         return stringBuilder.toString();
