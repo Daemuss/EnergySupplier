@@ -14,26 +14,31 @@ public class Customer
         this.gasUsage = gasUsage;
     }
 
+    // Returns customer id number
     public String getIdNumber()
     {
         return idNumber;
     }
 
+    // Returns customer name
     public String getName()
     {
         return name;
     }
 
+    // Returns customer address
     public String getAddress()
     {
         return address;
     }
 
+    // Returns customer electric usage
     public int getElectricUsage()
     {
         return electricUsage;
     }
 
+    // Returns customer gas usage
     public int getGasUsage()
     {
         return gasUsage;

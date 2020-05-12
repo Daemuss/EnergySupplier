@@ -9,6 +9,7 @@ public class EnergySupplier
         this.supplierName = supplierName;
     }
 
+    // Returns the supplier name
     public String getSupplierName()
     {
         return supplierName;
