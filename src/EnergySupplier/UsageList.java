@@ -4,15 +4,13 @@ import java.util.ArrayList;
 
 public class UsageList
 {
-    private ArrayList<Customer> customers;
-    private ArrayList<EnergySupplier> energySuppliers;
-    private ArrayList<String> usageList;
+    private final ArrayList<Customer> customers;
+    private final ArrayList<EnergySupplier> energySuppliers;
 
     public UsageList()
     {
         this.customers = new ArrayList<>();
         this.energySuppliers = new ArrayList<>();
-        this.usageList = new ArrayList<>();
     }
 
     // Adds a customer to the customers list

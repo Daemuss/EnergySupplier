@@ -2,8 +2,8 @@ package EnergySupplier;
 
 public class Customer
 {
-    private String idNumber, name, address;
-    private int  electricUsage, gasUsage;
+    private final String idNumber, name, address;
+    private final int  electricUsage, gasUsage;
 
     public Customer(String idNumber, String name, String address, int electricUsage, int gasUsage)
     {

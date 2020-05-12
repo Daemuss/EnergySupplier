@@ -2,7 +2,7 @@ package EnergySupplier;
 
 public class EnergySupplier
 {
-    private String supplierName;
+    private final String supplierName;
 
     public EnergySupplier(String supplierName)
     {
