@@ -119,15 +119,20 @@ public class Pane
             int gasUsage = Integer.parseInt(textFieldGasUsage.getText());
             String selectedSupplierName = comboBoxEnergySupplier.getValue();
 
-            Customer customer = new Customer(customerIdNumber, customerName, customerAddress, electricUsage, gasUsage);
-            EnergySupplier energySupplier = new EnergySupplier(selectedSupplierName);
+            if(selectedSupplierName == null)
+            {
+                System.out.println("No energy supplier selected");
+            }
+            else
+            {
+                Customer customer = new Customer(selectedSupplierName, customerIdNumber, customerName, customerAddress, electricUsage, gasUsage);
 
-            usageList.addCustomer(customer);
-            usageList.addEnergySupplier(energySupplier);
+                usageList.addCustomer(customer);
 
-            System.out.println("Energy usage data added");
-            textFieldElectricUsage.setStyle("-fx-background-color: white;");
-            textFieldGasUsage.setStyle("-fx-background-color: white;");
+                System.out.println("Energy usage data added");
+                textFieldElectricUsage.setStyle("-fx-background-color: white;");
+                textFieldGasUsage.setStyle("-fx-background-color: white;");
+            }
         }
         catch(NumberFormatException e)
         {

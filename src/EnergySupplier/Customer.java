@@ -2,16 +2,23 @@ package EnergySupplier;
 
 public class Customer
 {
-    private final String idNumber, name, address;
+    private final String supplierName, idNumber, name, address;
     private final int  electricUsage, gasUsage;
 
-    public Customer(String idNumber, String name, String address, int electricUsage, int gasUsage)
+    public Customer(String supplierName, String idNumber, String name, String address, int electricUsage, int gasUsage)
     {
+        this.supplierName = supplierName;
         this.idNumber = idNumber;
         this.name = name;
         this.address = address;
         this.electricUsage = electricUsage;
         this.gasUsage = gasUsage;
+    }
+
+    // Returns customer energy supplier name
+    public String getSupplierName()
+    {
+        return supplierName;
     }
 
     // Returns customer id number
